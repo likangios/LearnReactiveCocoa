@@ -35,7 +35,7 @@
     _loadingIndicator.frame = CGRectMake(120, 0, 30, 30);
     _loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
     _loadingIndicator.hidden = YES;
-    [_loadingIndicator startAnimating];
+//    [_loadingIndicator startAnimating];
     self.searchTextField.rightViewMode = UITextFieldViewModeAlways;
     self.searchTextField.rightView = _loadingIndicator;
     [self bindViewModel];
@@ -52,7 +52,19 @@
     RAC([UIApplication sharedApplication],networkActivityIndicatorVisible) = self.viewModel.executeSearch.executing;
 
     
-    RAC(self.loadingIndicator,hidden) = [self.viewModel.executeSearch.executing not];  
+    RAC(self.loadingIndicator,hidden) = [self.viewModel.executeSearch.executing not];
+    
+    RACSignal *signal = self.viewModel.executeSearch.executing;
+    
+    [signal subscribeNext:^(NSNumber *value) {
+        
+        if (value.boolValue) {
+            [self.loadingIndicator startAnimating];
+        }else{
+            [self.loadingIndicator stopAnimating];
+        }
+        
+    }];
     
     [self.viewModel.executeSearch.executionSignals subscribeNext:^(id x) {
         [self.searchTextField resignFirstResponder];

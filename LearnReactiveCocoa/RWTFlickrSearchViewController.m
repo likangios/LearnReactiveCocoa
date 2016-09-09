@@ -53,6 +53,8 @@
     
 //    RAC(self.loadingIndicator,hidden) = [self.viewModel.executeSearch.executing not];
     
+    
+    
     RACSignal *signal = self.viewModel.executeSearch.executing;
     
     [signal subscribeNext:^(NSNumber *value) {

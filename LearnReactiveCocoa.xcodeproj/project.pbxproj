@@ -10,6 +10,12 @@
 		61C16F3D1D80034B00416E4A /* RWTFlickrSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */; };
 		61C16F411D8003DB00416E4A /* RWTFlickrSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F3F1D8003DB00416E4A /* RWTFlickrSearchViewController.m */; };
 		61C16F421D8003DB00416E4A /* RWTFlickrSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C16F401D8003DB00416E4A /* RWTFlickrSearchViewController.xib */; };
+		61C16F461D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F441D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.m */; };
+		61C16F471D8157EC00416E4A /* RWTRecentSearchItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C16F451D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.xib */; };
+		61C16F4B1D81580E00416E4A /* RWTSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F491D81580E00416E4A /* RWTSearchResultsViewController.m */; };
+		61C16F4C1D81580E00416E4A /* RWTSearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C16F4A1D81580E00416E4A /* RWTSearchResultsViewController.xib */; };
+		61C16F551D81584200416E4A /* RWTSearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F531D81584200416E4A /* RWTSearchResultsTableViewCell.m */; };
+		61C16F561D81584200416E4A /* RWTSearchResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C16F541D81584200416E4A /* RWTSearchResultsTableViewCell.xib */; };
 		61D8B9161D7E979700196307 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D8B9151D7E979700196307 /* main.m */; };
 		61D8B9191D7E979700196307 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D8B9181D7E979700196307 /* AppDelegate.m */; };
 		61D8B91C1D7E979700196307 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D8B91B1D7E979700196307 /* ViewController.m */; };
@@ -24,11 +30,21 @@
 
 /* Begin PBXFileReference section */
 		491E6C6D996747EB0B5CCCD9 /* Pods-LearnReactiveCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactiveCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnReactiveCocoa/Pods-LearnReactiveCocoa.release.xcconfig"; sourceTree = "<group>"; };
-		61C16F3B1D80034B00416E4A /* RWTFlickrSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTFlickrSearchViewModel.h; sourceTree = "<group>"; };
-		61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTFlickrSearchViewModel.m; sourceTree = "<group>"; };
-		61C16F3E1D8003DB00416E4A /* RWTFlickrSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTFlickrSearchViewController.h; sourceTree = "<group>"; };
-		61C16F3F1D8003DB00416E4A /* RWTFlickrSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTFlickrSearchViewController.m; sourceTree = "<group>"; };
-		61C16F401D8003DB00416E4A /* RWTFlickrSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWTFlickrSearchViewController.xib; sourceTree = "<group>"; };
+		617D3DA41D82B01F00D5EB02 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		61C16F3B1D80034B00416E4A /* RWTFlickrSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWTFlickrSearchViewModel.h; path = ../RWTFlickrSearchViewModel.h; sourceTree = "<group>"; };
+		61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWTFlickrSearchViewModel.m; path = ../RWTFlickrSearchViewModel.m; sourceTree = "<group>"; };
+		61C16F3E1D8003DB00416E4A /* RWTFlickrSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWTFlickrSearchViewController.h; path = ../RWTFlickrSearchViewController.h; sourceTree = "<group>"; };
+		61C16F3F1D8003DB00416E4A /* RWTFlickrSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWTFlickrSearchViewController.m; path = ../RWTFlickrSearchViewController.m; sourceTree = "<group>"; };
+		61C16F401D8003DB00416E4A /* RWTFlickrSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RWTFlickrSearchViewController.xib; path = ../RWTFlickrSearchViewController.xib; sourceTree = "<group>"; };
+		61C16F431D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTRecentSearchItemTableViewCell.h; sourceTree = "<group>"; };
+		61C16F441D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTRecentSearchItemTableViewCell.m; sourceTree = "<group>"; };
+		61C16F451D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWTRecentSearchItemTableViewCell.xib; sourceTree = "<group>"; };
+		61C16F481D81580E00416E4A /* RWTSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWTSearchResultsViewController.h; path = ../RWTSearchResultsViewController.h; sourceTree = "<group>"; };
+		61C16F491D81580E00416E4A /* RWTSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWTSearchResultsViewController.m; path = ../RWTSearchResultsViewController.m; sourceTree = "<group>"; };
+		61C16F4A1D81580E00416E4A /* RWTSearchResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RWTSearchResultsViewController.xib; path = ../RWTSearchResultsViewController.xib; sourceTree = "<group>"; };
+		61C16F521D81584200416E4A /* RWTSearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTSearchResultsTableViewCell.h; sourceTree = "<group>"; };
+		61C16F531D81584200416E4A /* RWTSearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTSearchResultsTableViewCell.m; sourceTree = "<group>"; };
+		61C16F541D81584200416E4A /* RWTSearchResultsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RWTSearchResultsTableViewCell.xib; sourceTree = "<group>"; };
 		61D8B9111D7E979700196307 /* LearnReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D8B9151D7E979700196307 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61D8B9171D7E979700196307 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,9 +86,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		61C16F571D81585000416E4A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				61C16F431D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.h */,
+				61C16F441D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.m */,
+				61C16F451D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.xib */,
+				61C16F521D81584200416E4A /* RWTSearchResultsTableViewCell.h */,
+				61C16F531D81584200416E4A /* RWTSearchResultsTableViewCell.m */,
+				61C16F541D81584200416E4A /* RWTSearchResultsTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		61C16F581D81585A00416E4A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				61C16F481D81580E00416E4A /* RWTSearchResultsViewController.h */,
+				61C16F491D81580E00416E4A /* RWTSearchResultsViewController.m */,
+				61C16F4A1D81580E00416E4A /* RWTSearchResultsViewController.xib */,
+				61C16F3E1D8003DB00416E4A /* RWTFlickrSearchViewController.h */,
+				61C16F3F1D8003DB00416E4A /* RWTFlickrSearchViewController.m */,
+				61C16F401D8003DB00416E4A /* RWTFlickrSearchViewController.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		61C16F591D81586A00416E4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61C16F3B1D80034B00416E4A /* RWTFlickrSearchViewModel.h */,
+				61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		61D8B9081D7E979700196307 = {
 			isa = PBXGroup;
 			children = (
+				617D3DA41D82B01F00D5EB02 /* Reveal.framework */,
 				61D8B9131D7E979700196307 /* LearnReactiveCocoa */,
 				61D8B9121D7E979700196307 /* Products */,
 				51F3553D3B1437ECC76BA818 /* Pods */,
@@ -91,15 +143,13 @@
 		61D8B9131D7E979700196307 /* LearnReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				61C16F591D81586A00416E4A /* ViewModel */,
+				61C16F571D81585000416E4A /* Cell */,
+				61C16F581D81585A00416E4A /* VC */,
 				61D8B9171D7E979700196307 /* AppDelegate.h */,
 				61D8B9181D7E979700196307 /* AppDelegate.m */,
 				61D8B91A1D7E979700196307 /* ViewController.h */,
 				61D8B91B1D7E979700196307 /* ViewController.m */,
-				61C16F3B1D80034B00416E4A /* RWTFlickrSearchViewModel.h */,
-				61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */,
-				61C16F3E1D8003DB00416E4A /* RWTFlickrSearchViewController.h */,
-				61C16F3F1D8003DB00416E4A /* RWTFlickrSearchViewController.m */,
-				61C16F401D8003DB00416E4A /* RWTFlickrSearchViewController.xib */,
 				61D8B92F1D7EA2BA00196307 /* TwoViewController.h */,
 				61D8B9301D7EA2BA00196307 /* TwoViewController.m */,
 				61D8B9311D7EA2BA00196307 /* TwoViewController.xib */,
@@ -193,9 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D8B9241D7E979700196307 /* LaunchScreen.storyboard in Resources */,
+				61C16F471D8157EC00416E4A /* RWTRecentSearchItemTableViewCell.xib in Resources */,
 				61D8B9211D7E979700196307 /* Assets.xcassets in Resources */,
 				61C16F421D8003DB00416E4A /* RWTFlickrSearchViewController.xib in Resources */,
+				61C16F4C1D81580E00416E4A /* RWTSearchResultsViewController.xib in Resources */,
 				61D8B91F1D7E979700196307 /* Main.storyboard in Resources */,
+				61C16F561D81584200416E4A /* RWTSearchResultsTableViewCell.xib in Resources */,
 				61D8B9331D7EA2BA00196307 /* TwoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +312,12 @@
 				61D8B91C1D7E979700196307 /* ViewController.m in Sources */,
 				61D8B9191D7E979700196307 /* AppDelegate.m in Sources */,
 				61D8B92E1D7E9AA200196307 /* TestViewModel.m in Sources */,
+				61C16F551D81584200416E4A /* RWTSearchResultsTableViewCell.m in Sources */,
 				61D8B9321D7EA2BA00196307 /* TwoViewController.m in Sources */,
 				61D8B9161D7E979700196307 /* main.m in Sources */,
 				61C16F3D1D80034B00416E4A /* RWTFlickrSearchViewModel.m in Sources */,
+				61C16F461D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.m in Sources */,
+				61C16F4B1D81580E00416E4A /* RWTSearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,10 +432,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = LearnReactiveCocoa/LearnReactiveCocoa.pch;
 				INFOPLIST_FILE = LearnReactiveCocoa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"Result\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk.shoppinglist.LearnReactiveCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -393,10 +464,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = LearnReactiveCocoa/LearnReactiveCocoa.pch;
 				INFOPLIST_FILE = LearnReactiveCocoa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"Result\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lk.shoppinglist.LearnReactiveCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

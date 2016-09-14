@@ -51,20 +51,6 @@
     }] map:^id(NSString *value) {
         return @(value.length > 3);
     }] distinctUntilChanged];
-    [validSearchSignal subscribeNext:^(id x) {
-        
-        NSLog(@"search text is valid %@",x);
-    }];
-    
-    RACSignal *validMyTextField2 = [[RACObserve(self, searchText) map:^id(NSString *value) {
-        return @(value.length > 2);
-    }] distinctUntilChanged];
-    
-    [validMyTextField2 subscribeNext:^(id x) {
-        
-        NSLog(@"x is %@",x);
-        
-    }];
     
     self.executeSearch = [[RACCommand  alloc]initWithEnabled:validSearchSignal signalBlock:^RACSignal *(id input) {
         return [self executeSearchSignal];

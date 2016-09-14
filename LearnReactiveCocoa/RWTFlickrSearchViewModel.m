@@ -12,9 +12,20 @@
 
 @property (nonatomic,strong) RACSignal               *executeSignal;
 
+@property (nonatomic,weak)  id<RWTViewModelServices>  service;
+
 @end
 
 @implementation RWTFlickrSearchViewModel
+- (instancetype)initWithService:(id<RWTViewModelServices>)service{
+    self = [super init];
+    if (self) {
+        _service = service;
+        [self initialize];
+    }
+    
+    return self;
+}
 - (instancetype)init{
     self = [super init];
     if (self) {
@@ -33,7 +44,11 @@
 - (void)initialize{
     self.searchText =  @"search text";
     self.title = @"flickr search";
-    RACSignal *validSearchSignal = [[RACObserve(self, searchText) map:^id(NSString *value) {
+    RACSignal *validSearchSignal = [[[RACObserve(self, searchText) filter:^BOOL(NSString *value) {
+        
+        return value.length>2;
+        
+    }] map:^id(NSString *value) {
         return @(value.length > 3);
     }] distinctUntilChanged];
     [validSearchSignal subscribeNext:^(id x) {
@@ -41,14 +56,24 @@
         NSLog(@"search text is valid %@",x);
     }];
     
-    self.executeSearch = [[RACCommand alloc]initWithEnabled:validSearchSignal signalBlock:^RACSignal *(id input) {
+    RACSignal *validMyTextField2 = [[RACObserve(self, searchText) map:^id(NSString *value) {
+        return @(value.length > 2);
+    }] distinctUntilChanged];
+    
+    [validMyTextField2 subscribeNext:^(id x) {
+        
+        NSLog(@"x is %@",x);
+        
+    }];
+    
+    self.executeSearch = [[RACCommand  alloc]initWithEnabled:validSearchSignal signalBlock:^RACSignal *(id input) {
         return [self executeSearchSignal];
     }];
     
 }
 - (RACSignal *)executeSearchSignal{
     
-    return [[[[RACSignal empty] logAll]delay:2.0] logAll];
+    return [[self.service getFlickrSearchService] flickrSearchSignal:self.searchText];;
 }
 
 @end

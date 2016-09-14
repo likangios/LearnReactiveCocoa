@@ -61,6 +61,15 @@
         
     }];
     
+    RACSignal *validMyTextField2 = [[self.myTextField.rac_textSignal map:^id(NSString *value) {
+        return @(value.length > 2);
+    }] distinctUntilChanged];
+    [validMyTextField subscribeNext:^(id x) {
+        
+        NSLog(@"x is %@",x);
+        
+    }];
+    
     RACCommand *execute = [[RACCommand alloc]initWithEnabled:validMyTextField signalBlock:^RACSignal *(id input) {
         
         return [self executeSearchSignal];
@@ -69,6 +78,8 @@
     
     
     RACSignal *controlUpdate = [_myButton rac_signalForControlEvents:UIControlEventTouchUpInside];
+    
+    
     RACSignal *signal  =[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         [subscriber sendNext:@1];

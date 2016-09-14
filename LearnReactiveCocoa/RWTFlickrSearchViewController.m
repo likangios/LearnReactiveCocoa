@@ -9,7 +9,7 @@
 #import "RWTFlickrSearchViewController.h"
 #import "RWTFlickrSearchViewModel.h"
 
-@interface RWTFlickrSearchViewController ()
+@interface RWTFlickrSearchViewController ()<UITextFieldDelegate>
 
 @property (nonatomic,strong) RWTFlickrSearchViewModel               *viewModel;
 @property (nonatomic,weak) IBOutlet  UITextField                   *searchTextField;
@@ -30,6 +30,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    RACSignal *test = [self rac_signalForSelector:@selector(bindViewModel)];
+    
+    [test subscribeNext:^(RACTuple *x) {
+        
+        NSLog(@"x %@",x.second);
+        
+    }];
     self.view.backgroundColor = [UIColor grayColor];
     _loadingIndicator = [[UIActivityIndicatorView alloc]init];
     _loadingIndicator.frame = CGRectMake(120, 0, 30, 30);
@@ -49,15 +56,9 @@
     self.GoBtn.rac_command = self.viewModel.executeSearch;
     
     RAC([UIApplication sharedApplication],networkActivityIndicatorVisible) = self.viewModel.executeSearch.executing;
-
-    
-//    RAC(self.loadingIndicator,hidden) = [self.viewModel.executeSearch.executing not];
     
     
-    
-    RACSignal *signal = self.viewModel.executeSearch.executing;
-    
-    [signal subscribeNext:^(NSNumber *value) {
+    [self.GoBtn.rac_command.executing subscribeNext:^(NSNumber *value) {
         
         if (value.boolValue) {
             [self.loadingIndicator startAnimating];
@@ -67,13 +68,46 @@
         
     }];
     
-    [self.viewModel.executeSearch.executionSignals subscribeNext:^(id x) {
+    [self.GoBtn.rac_command.executionSignals subscribeNext:^(id x) {
+       
         [self.searchTextField resignFirstResponder];
+        
     }];
     
-    [self.viewModel.executeSearch.executing subscribeNext:^(NSNumber *x) {
-
-        NSLog(@"subscribeNext %@",x);
+    
+    [[[self.GoBtn.rac_command.executionSignals.flatten filter:^BOOL(NSDictionary  *value) {
+        if ([value[@"status"] isEqualToString:@"200"]) {
+            return YES;
+        }
+        NSLog(@"message is %@",value[@"message"]);
+        
+        return NO;
+        
+    }] map:^id(NSDictionary *value) {
+    
+        return value[@"data"];
+        
+    }] subscribeNext:^(NSArray *array) {
+        
+        [array.rac_sequence.signal subscribeNext:^(NSDictionary *tup) {
+            
+            [tup.rac_sequence.signal subscribeNext:^(RACTuple *x) {
+               
+                RACTupleUnpack(NSString *key , NSString *value) = x;
+                if ([key isEqualToString:@"context"]) {
+                    NSLog(@"%@:%@",key,value);    
+                }
+            }];
+            
+        }];
+        
+    }];;
+    
+    
+    [self.viewModel.executeSearch.errors subscribeNext:^(id x) {
+      
+        NSLog(@"error is %@",x);
+        
     }];
     
 }

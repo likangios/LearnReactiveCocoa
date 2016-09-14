@@ -9,10 +9,13 @@
 #import "AppDelegate.h"
 #import "RWTFlickrSearchViewModel.h"
 #import "RWTFlickrSearchViewController.h"
+#import "RWTViewModelServiceImp.h"
 
 @interface AppDelegate ()
 
 @property (nonatomic,strong) RWTFlickrSearchViewModel               *viewModel;
+
+@property (nonatomic,strong) RWTViewModelServiceImp               *viewModelService;
 @end
 
 @implementation AppDelegate
@@ -27,7 +30,12 @@
     return YES;
 }
 - (UIViewController *)createInitialViewController{
-    self.viewModel = [RWTFlickrSearchViewModel new];
+    
+    self.viewModelService  = [RWTViewModelServiceImp new];
+    
+    self.viewModel = [[RWTFlickrSearchViewModel alloc]initWithService:self.viewModelService];
+    
+    
     return [[RWTFlickrSearchViewController alloc]initWithNibName:@"RWTFlickrSearchViewController" bundle:nil WithModel:self.viewModel];
 }
 

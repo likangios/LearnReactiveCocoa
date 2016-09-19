@@ -11,6 +11,8 @@
 #import "RWTFlickrSearchViewController.h"
 #import "RWTViewModelServiceImp.h"
 
+#import "FRPGalleryViewController.h"
+
 @interface AppDelegate ()
 
 @property (nonatomic,strong) RWTFlickrSearchViewModel               *viewModel;
@@ -24,7 +26,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [self createInitialViewController];
+//    self.window.rootViewController = [self createInitialViewController];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[FRPGalleryViewController alloc]init]];
+
     [self.window makeKeyAndVisible];
     
     return YES;

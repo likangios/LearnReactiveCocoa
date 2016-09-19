@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		619534F61D8FC68200DD46AD /* FRPGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619534F51D8FC68200DD46AD /* FRPGalleryViewController.m */; };
+		619534F91D8FC8B700DD46AD /* FRPGalleryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 619534F81D8FC8B700DD46AD /* FRPGalleryFlowLayout.m */; };
+		619534FC1D8FC9BE00DD46AD /* FRPGalleryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 619534FB1D8FC9BE00DD46AD /* FRPGalleryViewModel.m */; };
+		619535001D8FD2A300DD46AD /* FRPFullSizePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619534FE1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.m */; };
+		619535011D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619534FF1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib */; };
+		619535051D8FE26900DD46AD /* FRPPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619535031D8FE26900DD46AD /* FRPPhotoViewController.m */; };
+		619535061D8FE26900DD46AD /* FRPPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619535041D8FE26900DD46AD /* FRPPhotoViewController.xib */; };
 		61C16F3D1D80034B00416E4A /* RWTFlickrSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */; };
 		61C16F411D8003DB00416E4A /* RWTFlickrSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F3F1D8003DB00416E4A /* RWTFlickrSearchViewController.m */; };
 		61C16F421D8003DB00416E4A /* RWTFlickrSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C16F401D8003DB00416E4A /* RWTFlickrSearchViewController.xib */; };
@@ -35,6 +42,18 @@
 /* Begin PBXFileReference section */
 		491E6C6D996747EB0B5CCCD9 /* Pods-LearnReactiveCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactiveCocoa.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnReactiveCocoa/Pods-LearnReactiveCocoa.release.xcconfig"; sourceTree = "<group>"; };
 		617D3DA41D82B01F00D5EB02 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		619534F41D8FC68200DD46AD /* FRPGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPGalleryViewController.h; sourceTree = "<group>"; };
+		619534F51D8FC68200DD46AD /* FRPGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryViewController.m; sourceTree = "<group>"; };
+		619534F71D8FC8B700DD46AD /* FRPGalleryFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPGalleryFlowLayout.h; sourceTree = "<group>"; };
+		619534F81D8FC8B700DD46AD /* FRPGalleryFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryFlowLayout.m; sourceTree = "<group>"; };
+		619534FA1D8FC9BE00DD46AD /* FRPGalleryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPGalleryViewModel.h; sourceTree = "<group>"; };
+		619534FB1D8FC9BE00DD46AD /* FRPGalleryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPGalleryViewModel.m; sourceTree = "<group>"; };
+		619534FD1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPFullSizePhotoViewController.h; sourceTree = "<group>"; };
+		619534FE1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPFullSizePhotoViewController.m; sourceTree = "<group>"; };
+		619534FF1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRPFullSizePhotoViewController.xib; sourceTree = "<group>"; };
+		619535021D8FE26900DD46AD /* FRPPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoViewController.h; sourceTree = "<group>"; };
+		619535031D8FE26900DD46AD /* FRPPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoViewController.m; sourceTree = "<group>"; };
+		619535041D8FE26900DD46AD /* FRPPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRPPhotoViewController.xib; sourceTree = "<group>"; };
 		61C16F3B1D80034B00416E4A /* RWTFlickrSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWTFlickrSearchViewModel.h; path = ../RWTFlickrSearchViewModel.h; sourceTree = "<group>"; };
 		61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWTFlickrSearchViewModel.m; path = ../RWTFlickrSearchViewModel.m; sourceTree = "<group>"; };
 		61C16F3E1D8003DB00416E4A /* RWTFlickrSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWTFlickrSearchViewController.h; path = ../RWTFlickrSearchViewController.h; sourceTree = "<group>"; };
@@ -100,6 +119,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		619534F21D8FC64B00DD46AD /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				617D3DA41D82B01F00D5EB02 /* Reveal.framework */,
+			);
+			name = framework;
+			sourceTree = "<group>";
+		};
+		619534F31D8FC65F00DD46AD /* FRPDemo */ = {
+			isa = PBXGroup;
+			children = (
+				619534F41D8FC68200DD46AD /* FRPGalleryViewController.h */,
+				619534F51D8FC68200DD46AD /* FRPGalleryViewController.m */,
+				619534FA1D8FC9BE00DD46AD /* FRPGalleryViewModel.h */,
+				619534FB1D8FC9BE00DD46AD /* FRPGalleryViewModel.m */,
+				619534F71D8FC8B700DD46AD /* FRPGalleryFlowLayout.h */,
+				619534F81D8FC8B700DD46AD /* FRPGalleryFlowLayout.m */,
+				619534FD1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.h */,
+				619534FE1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.m */,
+				619534FF1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib */,
+				619535021D8FE26900DD46AD /* FRPPhotoViewController.h */,
+				619535031D8FE26900DD46AD /* FRPPhotoViewController.m */,
+				619535041D8FE26900DD46AD /* FRPPhotoViewController.xib */,
+			);
+			name = FRPDemo;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		61C16F571D81585000416E4A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +191,7 @@
 		61D8B9081D7E979700196307 = {
 			isa = PBXGroup;
 			children = (
-				617D3DA41D82B01F00D5EB02 /* Reveal.framework */,
+				619534F21D8FC64B00DD46AD /* framework */,
 				61D8B9131D7E979700196307 /* LearnReactiveCocoa */,
 				61D8B9121D7E979700196307 /* Products */,
 				51F3553D3B1437ECC76BA818 /* Pods */,
@@ -163,6 +210,7 @@
 		61D8B9131D7E979700196307 /* LearnReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				619534F31D8FC65F00DD46AD /* FRPDemo */,
 				61E7131B1D87CA9100035098 /* Model */,
 				61C16F591D81586A00416E4A /* ViewModel */,
 				61C16F571D81585000416E4A /* Cell */,
@@ -274,7 +322,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619535061D8FE26900DD46AD /* FRPPhotoViewController.xib in Resources */,
 				61D8B9241D7E979700196307 /* LaunchScreen.storyboard in Resources */,
+				619535011D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib in Resources */,
 				61C16F471D8157EC00416E4A /* RWTRecentSearchItemTableViewCell.xib in Resources */,
 				61D8B9211D7E979700196307 /* Assets.xcassets in Resources */,
 				61C16F421D8003DB00416E4A /* RWTFlickrSearchViewController.xib in Resources */,
@@ -342,8 +392,10 @@
 			files = (
 				61C16F411D8003DB00416E4A /* RWTFlickrSearchViewController.m in Sources */,
 				61D8B91C1D7E979700196307 /* ViewController.m in Sources */,
+				619535051D8FE26900DD46AD /* FRPPhotoViewController.m in Sources */,
 				61E7131E1D87CA9E00035098 /* RWTFlickrPhoto.m in Sources */,
 				61D8B9191D7E979700196307 /* AppDelegate.m in Sources */,
+				619534F61D8FC68200DD46AD /* FRPGalleryViewController.m in Sources */,
 				61D8B92E1D7E9AA200196307 /* TestViewModel.m in Sources */,
 				61C16F551D81584200416E4A /* RWTSearchResultsTableViewCell.m in Sources */,
 				61D8B9321D7EA2BA00196307 /* TwoViewController.m in Sources */,
@@ -353,7 +405,10 @@
 				61C16F461D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.m in Sources */,
 				61C16F4B1D81580E00416E4A /* RWTSearchResultsViewController.m in Sources */,
 				61E713211D87CB1800035098 /* RWTFlickSearchResults.m in Sources */,
+				619534FC1D8FC9BE00DD46AD /* FRPGalleryViewModel.m in Sources */,
 				61E7131A1D87C4AA00035098 /* RWTViewModelServiceImp.m in Sources */,
+				619535001D8FD2A300DD46AD /* FRPFullSizePhotoViewController.m in Sources */,
+				619534F91D8FC8B700DD46AD /* FRPGalleryFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

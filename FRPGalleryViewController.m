@@ -53,7 +53,35 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.delegate = nil;
     
     self.collectionView.delegate = self;
-    // Do any additional setup after loading the view.
+    
+    
+    RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [subscriber sendNext:@"signalA"];
+        });
+        
+        return nil;
+    }];
+    RACSignal *signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 *NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [subscriber sendNext:@"signalB2"];
+        });
+        return nil;
+    }];
+    
+    [self rac_liftSelector:@selector(doA:withB:) withSignals:signalA,signalB, nil];
+    
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"" object:nil] subscribeNext:^(id x) {
+        
+    }];
+    
+    
+}
+- (void)doA:(NSString *)A withB:(NSString *)B{
+    
+    NSLog(@"A :%@ B:%@",A,B);
+    
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.viewmodel.model.count;

@@ -11,6 +11,8 @@
 #import "RWTFlickrSearchViewController.h"
 #import "RWTViewModelServiceImp.h"
 
+#import "LoginViewController.h"
+
 #import "FRPGalleryViewController.h"
 
 @interface AppDelegate ()
@@ -27,8 +29,10 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 //    self.window.rootViewController = [self createInitialViewController];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[FRPGalleryViewController alloc]init]];
-
+//    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[FRPGalleryViewController alloc]init]];
+    
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[LoginViewController alloc]init]];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

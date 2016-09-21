@@ -14,6 +14,9 @@
 		619535011D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619534FF1D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib */; };
 		619535051D8FE26900DD46AD /* FRPPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619535031D8FE26900DD46AD /* FRPPhotoViewController.m */; };
 		619535061D8FE26900DD46AD /* FRPPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619535041D8FE26900DD46AD /* FRPPhotoViewController.xib */; };
+		61B209531D9239C0007F17C2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B209511D9239C0007F17C2 /* LoginViewController.m */; };
+		61B209541D9239C0007F17C2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B209521D9239C0007F17C2 /* LoginViewController.xib */; };
+		61B209571D9239FF007F17C2 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B209561D9239FF007F17C2 /* LoginViewModel.m */; };
 		61C16F3D1D80034B00416E4A /* RWTFlickrSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */; };
 		61C16F411D8003DB00416E4A /* RWTFlickrSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C16F3F1D8003DB00416E4A /* RWTFlickrSearchViewController.m */; };
 		61C16F421D8003DB00416E4A /* RWTFlickrSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61C16F401D8003DB00416E4A /* RWTFlickrSearchViewController.xib */; };
@@ -54,6 +57,11 @@
 		619535021D8FE26900DD46AD /* FRPPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPPhotoViewController.h; sourceTree = "<group>"; };
 		619535031D8FE26900DD46AD /* FRPPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPPhotoViewController.m; sourceTree = "<group>"; };
 		619535041D8FE26900DD46AD /* FRPPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRPPhotoViewController.xib; sourceTree = "<group>"; };
+		61B209501D9239C0007F17C2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		61B209511D9239C0007F17C2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		61B209521D9239C0007F17C2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		61B209551D9239FF007F17C2 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		61B209561D9239FF007F17C2 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		61C16F3B1D80034B00416E4A /* RWTFlickrSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWTFlickrSearchViewModel.h; path = ../RWTFlickrSearchViewModel.h; sourceTree = "<group>"; };
 		61C16F3C1D80034B00416E4A /* RWTFlickrSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RWTFlickrSearchViewModel.m; path = ../RWTFlickrSearchViewModel.m; sourceTree = "<group>"; };
 		61C16F3E1D8003DB00416E4A /* RWTFlickrSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RWTFlickrSearchViewController.h; path = ../RWTFlickrSearchViewController.h; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 		619534F31D8FC65F00DD46AD /* FRPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				61B2094F1D9239AC007F17C2 /* test */,
 				619534F41D8FC68200DD46AD /* FRPGalleryViewController.h */,
 				619534F51D8FC68200DD46AD /* FRPGalleryViewController.m */,
 				619534FA1D8FC9BE00DD46AD /* FRPGalleryViewModel.h */,
@@ -145,6 +154,18 @@
 			);
 			name = FRPDemo;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		61B2094F1D9239AC007F17C2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				61B209501D9239C0007F17C2 /* LoginViewController.h */,
+				61B209511D9239C0007F17C2 /* LoginViewController.m */,
+				61B209521D9239C0007F17C2 /* LoginViewController.xib */,
+				61B209551D9239FF007F17C2 /* LoginViewModel.h */,
+				61B209561D9239FF007F17C2 /* LoginViewModel.m */,
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 		61C16F571D81585000416E4A /* Cell */ = {
@@ -324,6 +345,7 @@
 			files = (
 				619535061D8FE26900DD46AD /* FRPPhotoViewController.xib in Resources */,
 				61D8B9241D7E979700196307 /* LaunchScreen.storyboard in Resources */,
+				61B209541D9239C0007F17C2 /* LoginViewController.xib in Resources */,
 				619535011D8FD2A300DD46AD /* FRPFullSizePhotoViewController.xib in Resources */,
 				61C16F471D8157EC00416E4A /* RWTRecentSearchItemTableViewCell.xib in Resources */,
 				61D8B9211D7E979700196307 /* Assets.xcassets in Resources */,
@@ -394,12 +416,14 @@
 				61D8B91C1D7E979700196307 /* ViewController.m in Sources */,
 				619535051D8FE26900DD46AD /* FRPPhotoViewController.m in Sources */,
 				61E7131E1D87CA9E00035098 /* RWTFlickrPhoto.m in Sources */,
+				61B209531D9239C0007F17C2 /* LoginViewController.m in Sources */,
 				61D8B9191D7E979700196307 /* AppDelegate.m in Sources */,
 				619534F61D8FC68200DD46AD /* FRPGalleryViewController.m in Sources */,
 				61D8B92E1D7E9AA200196307 /* TestViewModel.m in Sources */,
 				61C16F551D81584200416E4A /* RWTSearchResultsTableViewCell.m in Sources */,
 				61D8B9321D7EA2BA00196307 /* TwoViewController.m in Sources */,
 				61D8B9161D7E979700196307 /* main.m in Sources */,
+				61B209571D9239FF007F17C2 /* LoginViewModel.m in Sources */,
 				61E713121D87AC8300035098 /* RWTFlickrSearchImpl.m in Sources */,
 				61C16F3D1D80034B00416E4A /* RWTFlickrSearchViewModel.m in Sources */,
 				61C16F461D8157EB00416E4A /* RWTRecentSearchItemTableViewCell.m in Sources */,
